@@ -1,9 +1,13 @@
 <html>
 <head>
-    <title>Lolivator - Beta</title>
+    <title>LoLivator - Beta</title>
+    <link rel="icon" href="img/logo.png">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <h1>Bienvenue sur Lolivator 2000</h1>
-    <link rel="icon" href="img/logo.png">
+    <header>
+        <img src="img/logo.png">
+        <h1 class="Welcome">Bienvenue sur LoLivator [BETA]</h1>
+    </header>
 </body>
 </html>
