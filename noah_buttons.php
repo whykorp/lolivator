@@ -26,6 +26,10 @@ for ($i = 1; $i <= 20; $i++) {
     echo "<button onclick=\"addPiece('Noah', $i)\">Ajouter 1 pièce</button>";
 }
 
+if (!$result) {
+    die("Erreur dans la requête SQL : " . mysqli_error($conn));
+}
+
 // Fermer la connexion à la base de données
 mysqli_close($conn);
 ?>
