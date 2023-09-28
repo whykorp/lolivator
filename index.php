@@ -3,6 +3,7 @@
     <title>LoLivator - Beta</title>
     <link rel="icon" href="img/logo.png">
     <link rel="stylesheet" href="styles/style.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
@@ -12,9 +13,11 @@
     <div class="app">
         <div class="noah">
             <?php include("noah_buttons.php"); ?>
+            <button onclick="addPiece('Noah', 1)">Ajouter 1 pièce</button>
         </div>
         <div class="lazare">
             <?php include("lazare_buttons.php"); ?>
+            <button onclick="addPiece('Lazare', 1)">Ajouter 1 pièce</button>
         </div>
     </div>
 </body>

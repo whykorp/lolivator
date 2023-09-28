@@ -26,10 +26,5 @@ $nombreDePiecesLazare = $row['nombre_de_pièces'];
 echo "<h2>Lazare</h2>";
 echo "<p>Nombre de pièces : $nombreDePiecesLazare</p>";
 
-// Boucle pour afficher les boutons (20 boutons ici, à personnaliser)
-for ($i = 1; $i <= 20; $i++) {
-    echo "<button onclick=\"addPiece('Lazare', $i)\">Ajouter 1 pièce</button>";
-}
-
 // Fermer la connexion à la base de données
 mysqli_close($conn);
