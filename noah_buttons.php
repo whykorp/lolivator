@@ -12,7 +12,7 @@ if (!$conn) {
 }
 
 // Récupérer le nombre de pièces de l'utilisateur "Noah" depuis la base de données
-$query = "SELECT nombre_de_pièce FROM lolivator_users WHERE nom='Noah'";
+$query = "SELECT nombre_de_pièce FROM utilisateurs WHERE nom='Noah'";
 $result = mysqli_query($conn, $query);
 
 if (!$result) {
