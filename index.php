@@ -9,5 +9,13 @@
         <img src="img/logo.png">
         <h1 class="Welcome">Bienvenue sur LoLivator [BETA]</h1>
     </header>
+    <div class="app">
+        <div class="noah">
+            <?php include("noah_buttons.php"); ?>
+        </div>
+        <div class="lazare">
+            <?php include("lazare_buttons.php"); ?>
+        </div>
+    </div>
 </body>
 </html>
