@@ -12,7 +12,7 @@ if (!$conn) {
 }
 
 // Récupérer le nombre de pièces de l'utilisateur "Lazare" depuis la base de données
-$query = "SELECT nombre_de_pièce FROM utilisateurs WHERE nom='Lazare'";
+$query = "SELECT nombre_de_pièces FROM utilisateurs WHERE nom='Lazare'";
 $result = mysqli_query($conn, $query);
 
 if (!$result) {
@@ -20,7 +20,7 @@ if (!$result) {
 }
 
 $row = mysqli_fetch_assoc($result);
-$nombreDePiecesLazare = $row['nombre_de_pièce'];
+$nombreDePiecesLazare = $row['nombre_de_pièces'];
 
 // Afficher les boutons de l'utilisateur "Lazare"
 echo "<h2>Lazare</h2>";
