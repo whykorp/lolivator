@@ -15,11 +15,19 @@ if (!$conn) {
 $nomUtilisateur = $_POST['nom'];
 $quantite = $_POST['quantite'];
 
-// Mettre à jour le nombre de pièces de l'utilisateur
-$query = "UPDATE utilisateurs SET nombre_de_pièce = nombre_de_pièce + $quantite WHERE nom='$nomUtilisateur'";
-$result = mysqli_query($conn, $query);
+// Préparez la requête SQL avec une requête préparée
+$query = "UPDATE utilisateurs SET nombre_de_pièce = nombre_de_pièce + ? WHERE nom = ?";
+$stmt = mysqli_prepare($conn, $query);
 
-if ($result) {
+if (!$stmt) {
+    die("Erreur dans la préparation de la requête : " . mysqli_error($conn));
+}
+
+// Liez les paramètres
+mysqli_stmt_bind_param($stmt, "is", $quantite, $nomUtilisateur);
+
+// Exécutez la requête préparée
+if (mysqli_stmt_execute($stmt)) {
     echo "success"; // Indiquer que la mise à jour s'est bien déroulée
 } else {
     echo "error"; // Indiquer une erreur en cas d'échec
